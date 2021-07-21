@@ -19,7 +19,18 @@ Given company reviews from JobStreet, how should we better rank the companies?
 
 **1. Weighted Average Review**
 
-TODO: explain formula and result
+It's inspired by how IMDb previously rank their Top 250 movies. Following is the formula.
+
+```
+weighted rank (WR) = (v ÷ (v+m)) × R + (m ÷ (v+m)) × C
+ where:
+  R = average review for the company = (mean_review)
+  v = number of review for the company = (sum_review)
+  m = minimum num of review required to be listed in the analysis
+  C = the average review across the whole report
+```
+
+Notice that if a movie has only few number of review then the WR will be closer to the overall mean review (C). Contrary, if a movie has far higher number of review than `m`, the WR will close to the mean review given to the movie. It emphasizes the notion of believing the average review if only it has high number of review.
 
 **2. Bayesian Analysis**
 
