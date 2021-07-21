@@ -4,7 +4,7 @@
 
 **Background**
 
-TODO: put revou hapinnes index report and notice that something off
+TODO: put revou hapinnes index report and notice that something could be done better
 
 **Problem Statement**
 
@@ -34,7 +34,11 @@ Notice that if a movie has only few number of review then the WR will be closer 
 
 **2. Bayesian Analysis**
 
-TODO: explain formula and result
+In Bayesian Analysis, we have prior believe about some parameters and we will update the believe given data about the parameters. In this analysis we have one parameter: `company review` with value between 1 and 5. We will assume the parameter have Gaussian (re: Normal) prior distribution. We will have Normal posterior distribution because Normal-Normal conjugate prior.
+
+The advantage of using Bayesian Analysis is that we have posterior distribution instead of point estimation. From the posterior distribution we could derive any statistics about the parameter. For sorting/ranking purposes we could use `percentile 25 of the distribution` instead of mean. The below image shows why mean of posterior distribution is not a good metric for ranking. Contrary, p25 will tells us how uncertain we are about the posterior distribution (*circle represents mean of the posterior distribution).
+
+![Company Ranking by p25 Posterior Distribution](company-rank-by-p25-posterior-dist.png)
 
 ---
 
