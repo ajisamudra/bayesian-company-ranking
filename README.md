@@ -1,4 +1,4 @@
-# company-rank-by-reviews
+# Bayesian Company Ranking
 
 ## Company Ranking
 
